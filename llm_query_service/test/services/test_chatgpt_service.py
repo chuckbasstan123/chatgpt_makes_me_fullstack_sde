@@ -1,6 +1,6 @@
 import pytest
 from app.services.chatgpt_service import ChatGPTService
-from config import OPENAI_MODEL, OPENAI_API_KEY
+from app.config import OPENAI_MODEL, OPENAI_API_KEY
 
 
 def test_chatgpt_service():
