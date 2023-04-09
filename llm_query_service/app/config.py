@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 
 OPENAI_MODEL = "text-davinci-003"

@@ -1,1 +1,2 @@
 curl -X POST -H "Content-Type: application/json" -d '{"prompt": "Once upon a time", "max_tokens": 50}' http://localhost:5000/chatgpt/query
+curl http://34.75.228.61:5000/chatgpt/query -H "Authorization: Bearer $GOOGLE_API_KEY" -H "Content-Type: application/json" -d '{"prompt": "假设你是蔡徐坤，你超自信，觉得自己超会打篮球。请回答：你打算什么时候谈恋爱？和谁？请用英文回答。", "max_tokens": 100}'
