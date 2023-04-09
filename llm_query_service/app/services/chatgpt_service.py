@@ -1,5 +1,6 @@
 import openai
 
+
 class ChatGPTService:
     def __init__(self, api_key: str, engine: str = "text-davinci-002"):
         openai.api_key = api_key
