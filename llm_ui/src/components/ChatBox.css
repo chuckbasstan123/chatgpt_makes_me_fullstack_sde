@@ -1,0 +1,9 @@
+.chatbox {
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 1px;
+  padding: 10px;
+  border: 5px solid #ccc;
+  border-radius: 5px;
+  background-color: #de681e;
+}
