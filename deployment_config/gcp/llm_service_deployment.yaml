@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: chucktanisnotadog/llm_service_3:latest
+        image: chucktanisnotadog/llm_service_6:latest
         ports:
         - containerPort: 5000

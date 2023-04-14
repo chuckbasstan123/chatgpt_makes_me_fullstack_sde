@@ -2,11 +2,10 @@ import React from 'react';
 import './Message.css';
 
 const Message = ({ sender, text }) => {
-  const messageClass = sender === 'user' ? 'message-user' : 'message-chatbot';
-
   return (
-    <div className={`message ${messageClass}`}>
-      <p>{text}</p>
+    <div className="message">
+      <div className="sender">{sender}</div>
+      <div className="text">{text}</div>
     </div>
   );
 };
