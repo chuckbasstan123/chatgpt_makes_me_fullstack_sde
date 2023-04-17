@@ -1,9 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import ChatInput from './ChatInput';
 import ChatMessage from './ChatMessage';
 import './ChatWindow.css';
 
 const ChatWindow = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+    const loginTimestamp = parseInt(localStorage.getItem('loginTimestamp'), 10);
+    const sessionDuration = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+    if (!isAuthenticated || Date.now() - loginTimestamp > sessionDuration) {
+      // If not authenticated or the session has expired, navigate to the login page
+      localStorage.removeItem('isAuthenticated');
+      localStorage.removeItem('loginTimestamp');
+      navigate('/login');
+    }
+  }, [location, navigate]);
+
   const [messages, setMessages] = useState([]);
 
   const addMessage = (message, isUser) => {
