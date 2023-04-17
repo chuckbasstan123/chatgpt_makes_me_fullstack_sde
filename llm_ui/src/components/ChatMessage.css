@@ -1,0 +1,11 @@
+.user-message {
+  align-self: flex-end;
+  background-color: #007aff;
+  color: white;
+}
+
+.chatbot-message {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+  color: #333;
+}
